@@ -1,0 +1,41 @@
+{
+  "data": [
+    {
+      "text": "@perbu @bitfield Do you run DOS? They will find something else to do :-)",
+      "created_at": "2021-05-21T13:16:27.000Z",
+      "conversation_id": "1395721291072692231",
+      "in_reply_to_user_id": "17448915",
+      "author_id": "14229775",
+      "id": "1395730205432586241"
+    },
+    {
+      "text": "@bitfield Bugs exist even without code though",
+      "created_at": "2021-05-21T13:09:44.000Z",
+      "conversation_id": "1395721291072692231",
+      "in_reply_to_user_id": "14375294",
+      "author_id": "46075288",
+      "id": "1395728517799755778"
+    },
+    {
+      "text": "@bitfield \"This is the fastest code I never wrote.\" ~ Bugfree Programmer the 1st",
+      "created_at": "2021-05-21T13:00:59.000Z",
+      "conversation_id": "1395721291072692231",
+      "in_reply_to_user_id": "14375294",
+      "author_id": "33064560",
+      "id": "1395726315907596289"
+    },
+    {
+      "text": "@bitfield Those poor CPU cores might feel useless, though. Think of the CPU cores.",
+      "created_at": "2021-05-21T12:46:10.000Z",
+      "conversation_id": "1395721291072692231",
+      "in_reply_to_user_id": "14375294",
+      "author_id": "17448915",
+      "id": "1395722587938992128"
+    }
+  ],
+  "meta": {
+    "newest_id": "1395730205432586241",
+    "oldest_id": "1395722587938992128",
+    "result_count": 4
+  }
+}%

@@ -30,7 +30,7 @@ func DecodeJSONIntoStruct(r io.Reader) (TwitterResponse, error) {
 }
 
 func NewTweetRequest(token, ID string) (*http.Request, error) {
-	URL := fmt.Sprintf("https://api.twitter.com/2/tweets/tweets?id=%s&tweet.fields=author_id,conversation_id,created_at,in_reply_to_user_id,referenced_tweets&expansions=author_id,in_reply_to_user_id,referenced_tweets.id&user.fields=name,username", ID)
+	URL := fmt.Sprintf("https://api.twitter.com/2/tweets?ids=%s&tweet.fields=author_id,conversation_id,created_at,in_reply_to_user_id,referenced_tweets&expansions=author_id,in_reply_to_user_id,referenced_tweets.id&user.fields=name,username", ID)
 	req, err := http.NewRequest(http.MethodGet, URL, nil)
 	if err != nil {
 		return nil, err
