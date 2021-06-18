@@ -1,41 +1,153 @@
 {
   "data": [
     {
-      "text": "@perbu @bitfield Do you run DOS? They will find something else to do :-)",
-      "created_at": "2021-05-21T13:16:27.000Z",
-      "conversation_id": "1395721291072692231",
-      "in_reply_to_user_id": "17448915",
-      "author_id": "14229775",
-      "id": "1395730205432586241"
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400108660181934081",
+      "created_at": "2021-06-02T15:14:52.000Z",
+      "text": "And that's it, basically!  There are a lot of ways to use system to support this structure. I think you could definitely build a system just *for* the support of this structure, but you can honestly use this for just about any system you enjoy.\n\nHope it helps and makes sense!"
     },
     {
-      "text": "@bitfield Bugs exist even without code though",
-      "created_at": "2021-05-21T13:09:44.000Z",
-      "conversation_id": "1395721291072692231",
-      "in_reply_to_user_id": "14375294",
-      "author_id": "46075288",
-      "id": "1395728517799755778"
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400108107431301125",
+      "created_at": "2021-06-02T15:12:40.000Z",
+      "text": "The goal is to turn what you are doing as you talk into the subtext of the talk, and to allow that subtext to reify your conversation so that it feels substantial, occasionally resetting and palette-cleansing with physical action."
     },
     {
-      "text": "@bitfield \"This is the fastest code I never wrote.\" ~ Bugfree Programmer the 1st",
-      "created_at": "2021-05-21T13:00:59.000Z",
-      "conversation_id": "1395721291072692231",
-      "in_reply_to_user_id": "14375294",
-      "author_id": "33064560",
-      "id": "1395726315907596289"
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400107474649288704",
+      "created_at": "2021-06-02T15:10:09.000Z",
+      "text": "providing the backdrop details as characters talk...if they are helping repair a village, putting their convo at the forefront, but still injecting some details of the scene and having them make the checks and rolls they would normally make as they talk."
     },
     {
-      "text": "@bitfield Those poor CPU cores might feel useless, though. Think of the CPU cores.",
-      "created_at": "2021-05-21T12:46:10.000Z",
-      "conversation_id": "1395721291072692231",
-      "in_reply_to_user_id": "14375294",
-      "author_id": "17448915",
-      "id": "1395722587938992128"
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400107161066393608",
+      "created_at": "2021-06-02T15:08:54.000Z",
+      "text": "You can focus on dialogue from a third person point of view and at distance  - \"he says..\" if you are more comfortable that way.\nOr you can delve full into scene chewing character talking if that is your thing. Either works!\nThe GM's role is to keep background moving..."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400106506020921345",
+      "created_at": "2021-06-02T15:06:18.000Z",
+      "text": "and then...when it doesn't seem like there is any more to say, when there is a some insurmountable topic or conflict...the conversational momentum explodes into big physical action. We flip the camera's focus on the action now."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400105573333487618",
+      "created_at": "2021-06-02T15:02:36.000Z",
+      "text": "\"What are we talking about as we clear through the brush?\"\n\n\"What are arguing about as we find our way back to the trail?\"\n\n\"What do we learn about each other as we enter the town?\"\n\nWe alter the focus of the camera to the words of the characters."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400104745692450818",
+      "created_at": "2021-06-02T14:59:18.000Z",
+      "text": "example:\nCharacters are travelling from place A to B through a forest. We can make the skill checks and rolls of them navigating the forest, but instead of making the narrative about how they navigate the forest, we break those scenes into convos..."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400104361510965248",
+      "created_at": "2021-06-02T14:57:47.000Z",
+      "text": "Which is really a way of saying that you structure the game in a way that most actions are part of the background of a scene and that we put the discussions between characters at the fore."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400103816360517633",
+      "created_at": "2021-06-02T14:55:37.000Z",
+      "text": "The guiding principle I'd use for a Castlevania structure is:\n\nTalk until it explodes."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400103550076829709",
+      "created_at": "2021-06-02T14:54:33.000Z",
+      "text": "It's fun to just jump to mechanics and delve into system, but IME you can do so much more heavy lifting with looking at the structure of how sessions will go. \n\nAlso, structure is portable. A good structure can work with just about any system you please."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400102797673127938",
+      "created_at": "2021-06-02T14:51:34.000Z",
+      "text": "This is a show that routinely had multiple episodes where people just...talked....and it felt like almost a let down when a fight broke out!\n\nSo, anyway, from a design point of view, I look for patterns like this, how those patterns make me feel.\n\nThen I think about structure."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400102263591419910",
+      "created_at": "2021-06-02T14:49:26.000Z",
+      "text": "rather than dialogue feeling like this compulsory space between fight scenes, fight scenes felt like the natural consequence of what the characters were talking and coming into conflict about.\n\nFor me, the role of talking and fight scenes were completely reversed!"
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400101500182056967",
+      "created_at": "2021-06-02T14:46:24.000Z",
+      "text": "and the \"action\" scenes are the transitional payoffs between the action of dialogue. \nI really loved the action scenes, but I found myself wanting the dialogue scenes more and more. The action scenes were ways to release the tension of the discoveries and revelations in dialogue."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400100875109081089",
+      "created_at": "2021-06-02T14:43:55.000Z",
+      "text": "but more importantly, it uses its dialogue in such a way that it makes the dialogue more like an action scene than a dramatic scene. The level of interplay and back and forth, the way the dialogue advances plot, builds relationships...\nThe dialogue *is* the action."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400100112626450440",
+      "created_at": "2021-06-02T14:40:54.000Z",
+      "text": "I will take some tips from the video game, but the *show* Castlevania is just so perfect for a TTRPG it is the main emphasis of what I'm talking about here.\n\nSo, my favorite favorite thing about the show is how well it uses dialogue to create story and transition to action..."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400099421166223363",
+      "created_at": "2021-06-02T14:38:09.000Z",
+      "text": "Last disclaimer: I'm probably not actually building this thing, which is why I am talking about it...it's my way for getting things out of my head so I can focus. If my thoughts make sense and you wanna build something using it, go for it!\n\nOK, ready?"
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400099054705647619",
+      "created_at": "2021-06-02T14:36:41.000Z",
+      "text": "...feel free to apply whatever we are talking about to your system of choice, but I'm not shopping or asking for system recommendations. I  probably won't interact much with \"this system does X\" even though I'm sure it does! \n\nThis is just not that conversation."
+    },
+    {
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400098271775932418",
+      "created_at": "2021-06-02T14:33:35.000Z",
+      "text": "This is super spoiler free, as IMO the way you design games based on other media is to extract patterns and not to translate content.\n\nAlso: I've got thoughts on what I'd use for system, but I'd REALLY rather talk about what a system should be doing to emulate the feel."
     }
   ],
   "meta": {
-    "newest_id": "1395730205432586241",
-    "oldest_id": "1395722587938992128",
-    "result_count": 4
+    "newest_id": "1400108660181934081",
+    "oldest_id": "1400098271775932418",
+    "result_count": 18
   }
-}%
+}
