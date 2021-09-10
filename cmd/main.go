@@ -11,6 +11,14 @@ import (
 )
 
 func main() {
+	TweetIDFromArgs(os.Args)
+	NewTwitterClientFromEnv()
+	NewGhostClientFromEnv()
+	NewTweetID()
+	NewAuthorIDFromEnv()
+
+}
+func oldmain() {
 	token := os.Getenv("TWITTER_BEARER_TOKEN")
 	api := os.Getenv("GHOST_API_TOKEN")
 	now := time.Now()
@@ -18,36 +26,29 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	ID := "1405513134245388292"
-	req, err := birdblog.NewConversationRequest(token, ID)
+	ID := "1430623231535423492"
+	tc := birdblog.NewTwitterClient(token)
+	conversation, err := tc.GetConversation(ID)
+	filter := conversation.FilterAuthor("223680024")
+	ghostReq, err := birdblog.GhostPostRequest(filter, ghostJWT, "thoughtcrime-games.ghost.io")
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(req.URL)
-	resp, err := http.DefaultClient.Do(req)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer resp.Body.Close()
-	if resp.StatusCode != http.StatusOK {
-		log.Fatal("no tweets for you: %v", resp.Status)
-	}
-	tweet, err := birdblog.DecodeJSONIntoStruct(resp.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
-	ghostReq, err := birdblog.GhostPostRequest(tweet, ghostJWT, "thoughtcrime-games.ghost.io")
-	if err != nil {
-		log.Fatal(err)
-	}
-	// fmt.Printf("%+v", tweet)
-	b, _ := io.ReadAll(ghostReq.Body)
-	fmt.Printf("%s\n", string(b))
+	// fmt.Printf("%+v", filter.String())
+
 	ghostResp, err := http.DefaultClient.Do(ghostReq)
+	io.Copy(os.Stdout, ghostResp.Body)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("Can't make the ghost post", err)
 	}
-	if ghostResp.StatusCode != http.StatusOK {
+	ghostURL, err := birdblog.RetrieveGhostURL(ghostResp.Body)
+	if err != nil {
+		log.Fatalf("Error retrieving Ghost URL: %s", err.Error())
+	}
+	defer ghostResp.Body.Close()
+
+	fmt.Printf("Ghost URL: %s", ghostURL)
+	if ghostResp.StatusCode != http.StatusCreated {
 		r, _ := io.ReadAll(ghostResp.Body)
 		log.Fatal("\nCan't make a Ghost draft: ", string(r))
 	}

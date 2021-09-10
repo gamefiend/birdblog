@@ -15,6 +15,9 @@
 *Filter conversation by author*
 author id 223680024
 
+// Ghost API url
+https://{admin_domain}/ghost/api/{version}/admin/
+
 TODO:
     NewConversationRequest(token, conversationID)
     FormatThread(tweet, conversation)

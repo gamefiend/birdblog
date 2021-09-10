@@ -3,9 +3,11 @@ package birdblog
 import (
 	"encoding/hex"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"html"
 	"io"
+	"log"
 	"net/http"
 	"strings"
 	"time"
@@ -16,7 +18,7 @@ import (
 type TwitterResponse struct {
 	Data []struct {
 		Text     string
-		AuthorID string
+		AuthorID string `json:"author_id"`
 	}
 	Meta struct {
 		NewestID    string
@@ -26,7 +28,58 @@ type TwitterResponse struct {
 	}
 }
 
-type Conversation []string
+type TwitterClient struct {
+	token      string
+	BaseURL    string
+	HTTPClient *http.Client
+}
+
+type Tweet struct {
+	Content  string
+	AuthorID string
+}
+
+type Conversation []Tweet
+
+func (c Conversation) String() string {
+	var content strings.Builder
+	for _, t := range c {
+		content.WriteString(t.String())
+	}
+	return content.String()
+}
+
+func (c Conversation) FilterAuthor(ID string) Conversation {
+	var filter Conversation
+	for _, tweet := range c {
+		if tweet.AuthorID == ID {
+			filter = append(filter, tweet)
+		}
+	}
+	return filter
+}
+
+func (c Conversation) FormatForGhost() string {
+	var format strings.Builder
+	for _, tweet := range c {
+		format.WriteString("<p>")
+		format.WriteString(strings.ReplaceAll(tweet.Content, "\n\n", "</p>\n<p>"))
+		format.WriteString("</p>\n")
+	}
+	return format.String()
+}
+
+func NewTwitterClient(token string) TwitterClient {
+	return TwitterClient{
+		token:      token,
+		BaseURL:    "https://api.twitter.com/2",
+		HTTPClient: http.DefaultClient,
+	}
+}
+
+func (t Tweet) String() string {
+	return t.Content
+}
 
 // DecodeJSONIntoStruct returns Conversation
 func DecodeJSONIntoStruct(r io.Reader) (Conversation, error) {
@@ -39,18 +92,41 @@ func DecodeJSONIntoStruct(r io.Reader) (Conversation, error) {
 	// grab the data in reverse order and put it into conversation
 	convo := make(Conversation, 0, len(tr.Data))
 	for i := len(tr.Data) - 1; i >= 0; i-- {
-		convo = append(convo, tr.Data[i].Text)
+		convo = append(convo, Tweet{
+			Content:  tr.Data[i].Text,
+			AuthorID: tr.Data[i].AuthorID,
+		})
 	}
 	return convo, nil
 }
+func (tc TwitterClient) GetConversation(ID string) (Conversation, error) {
+	req, err := tc.NewConversationRequest(ID)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-func NewConversationRequest(token, ID string) (*http.Request, error) {
-	URL := fmt.Sprintf("https://api.twitter.com/2/tweets/search/recent?query=conversation_id:%s&max_results=100&tweet.fields=in_reply_to_user_id,author_id,created_at,conversation_id", ID)
+	resp, err := tc.HTTPClient.Do(req)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("error retrieving tweets: %v", resp.Status)
+	}
+	conversation, err := DecodeJSONIntoStruct(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+	return conversation, nil
+}
+
+func (tc TwitterClient) NewConversationRequest(ID string) (*http.Request, error) {
+	URL := fmt.Sprintf("%s/tweets/search/recent?query=conversation_id:%s&max_results=100&tweet.fields=in_reply_to_user_id,author_id,created_at,conversation_id", tc.BaseURL, ID)
 	req, err := http.NewRequest(http.MethodGet, URL, nil)
 	if err != nil {
 		return nil, err
 	}
-	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
+	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", tc.token))
 	return req, nil
 }
 
@@ -61,7 +137,7 @@ func GhostPostRequest(content Conversation, token, site string) (*http.Request, 
 		return nil, err
 	}
 
-	posts := html.EscapeString(strings.Join(content, "\n"))
+	posts := html.EscapeString(content.String())
 	req.Header.Set("Authorization", fmt.Sprintf("Ghost %s", token))
 	req.Header.Set("Content-Type", "application/json")
 	body := `
@@ -101,4 +177,23 @@ func MakeGhostJWT(api string, start time.Time) (string, error) {
 	}
 	return string(token), nil
 
+}
+
+func RetrieveGhostURL(r io.Reader) (string, error) {
+	type GhostResponse struct {
+		Posts []struct {
+			Url string
+		}
+	}
+	var gr GhostResponse
+	err := json.NewDecoder(r).Decode(&gr)
+	if err != nil {
+		return "", err
+	}
+
+	if len(gr.Posts) < 1 {
+		return "", errors.New("Invalid Ghost Response")
+	}
+
+	return gr.Posts[0].Url, nil
 }
