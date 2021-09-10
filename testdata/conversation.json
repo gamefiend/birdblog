@@ -1,41 +1,25 @@
 {
   "data": [
     {
-      "text": "@perbu @bitfield Do you run DOS? They will find something else to do :-)",
-      "created_at": "2021-05-21T13:16:27.000Z",
-      "conversation_id": "1395721291072692231",
-      "in_reply_to_user_id": "17448915",
-      "author_id": "14229775",
-      "id": "1395730205432586241"
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400099054705647619",
+      "created_at": "2021-06-02T14:36:41.000Z",
+      "text": "...feel free to apply whatever we are talking about to your system of choice, but I'm not shopping or asking for system recommendations. I  probably won't interact much with \"this system does X\" even though I'm sure it does! \n\nThis is just not that conversation."
     },
     {
-      "text": "@bitfield Bugs exist even without code though",
-      "created_at": "2021-05-21T13:09:44.000Z",
-      "conversation_id": "1395721291072692231",
-      "in_reply_to_user_id": "14375294",
-      "author_id": "46075288",
-      "id": "1395728517799755778"
-    },
-    {
-      "text": "@bitfield \"This is the fastest code I never wrote.\" ~ Bugfree Programmer the 1st",
-      "created_at": "2021-05-21T13:00:59.000Z",
-      "conversation_id": "1395721291072692231",
-      "in_reply_to_user_id": "14375294",
-      "author_id": "33064560",
-      "id": "1395726315907596289"
-    },
-    {
-      "text": "@bitfield Those poor CPU cores might feel useless, though. Think of the CPU cores.",
-      "created_at": "2021-05-21T12:46:10.000Z",
-      "conversation_id": "1395721291072692231",
-      "in_reply_to_user_id": "14375294",
-      "author_id": "17448915",
-      "id": "1395722587938992128"
+      "conversation_id": "1400096718788743180",
+      "author_id": "223680024",
+      "in_reply_to_user_id": "223680024",
+      "id": "1400098271775932418",
+      "created_at": "2021-06-02T14:33:35.000Z",
+      "text": "This is super spoiler free, as IMO the way you design games based on other media is to extract patterns and not to translate content.\n\nAlso: I've got thoughts on what I'd use for system, but I'd REALLY rather talk about what a system should be doing to emulate the feel."
     }
   ],
   "meta": {
-    "newest_id": "1395730205432586241",
-    "oldest_id": "1395722587938992128",
-    "result_count": 4
+    "newest_id": "1400108660181934081",
+    "oldest_id": "1400098271775932418",
+    "result_count": 18
   }
-}%
+}

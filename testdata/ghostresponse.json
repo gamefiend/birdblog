@@ -1,0 +1,107 @@
+{
+    "posts": [
+        {
+            "id": "6128d89ca06650003b0ed434",
+            "uuid": "0d725064-4953-43da-a2da-6bded281b27b",
+            "title": "Twitter Draft",
+            "slug": "twitter-draft-12",
+            "mobiledoc": "{\"version\":\"0.3.1\",\"atoms\":[],\"cards\":[],\"markups\":[],\"sections\":[[1,\"p\",[[0,[],0,\"I've mentioned it before, but I want more games to invest in adventures. Why? Quite simply this: a good adventure shows off the applications of your game system. It serves as a guide for GMs and players for what your game can do, what your world is like.it doesn't have to be a linear adventure with a pre-planned plot, either: For @Genesisoflegend's Sigs we did starting scenarios that gave a lot of backdrop into some situation that represents what can happen in the world. Even if you never play it, it is an example.I can give you rules, I can give you advice, but when I give you some characters, motivations, and scenes and tell you how they interact with the rules and advice...I've given you something substantial. Adventures are system in motion.and while adventures take time and energy to prep, they don't require the same level of creative energy that building from scratch does (ask me how I know!) Providing that start can make it easier for someone to start playing your game.Also, there is this neat part of adventure writing that is sort of like fan fiction for your favorite game. Sometimes I like writing adventures just because I want a way to show people cool stuff about the system. \\\"All Life's Treasures\\\", my go-to PF2e intro, is for this.and maybe adventures is just too evocative of a certain style of play for folks? Let's call it a starting situation or story framework. Whatever makes it work better in your mind. My main assertion is that we need more of them! Making it easier to start playing is good.Also, providing a structure for how to use your systems and advice is tremendously instructive for your players! So...I love adventures! (FWIW, none of this is going in the guest blog :) )@shoepixie I could consult but I am booked solid atm!\"]]]]}",
+            "comment_id": "6128d89ca06650003b0ed434",
+            "feature_image": null,
+            "featured": false,
+            "status": "draft",
+            "visibility": "public",
+            "email_recipient_filter": "none",
+            "created_at": "2021-08-27T12:20:44.000Z",
+            "updated_at": "2021-08-27T12:20:44.000Z",
+            "published_at": null,
+            "custom_excerpt": null,
+            "codeinjection_head": null,
+            "codeinjection_foot": null,
+            "custom_template": null,
+            "canonical_url": null,
+            "tags": [],
+            "authors": [
+                {
+                    "id": "1",
+                    "name": "Thoughtcrime Games",
+                    "slug": "thoughtcrime",
+                    "email": "quinn@thoughtcrimegames.net",
+                    "profile_image": null,
+                    "cover_image": null,
+                    "bio": null,
+                    "website": null,
+                    "location": null,
+                    "facebook": null,
+                    "twitter": null,
+                    "accessibility": null,
+                    "status": "active",
+                    "meta_title": null,
+                    "meta_description": null,
+                    "tour": null,
+                    "last_seen": "2021-08-27T11:59:49.000Z",
+                    "created_at": "2021-05-20T20:28:04.000Z",
+                    "updated_at": "2021-08-27T11:59:49.000Z",
+                    "roles": [
+                        {
+                            "id": "60a6c6541fcca9002f5c8eb9",
+                            "name": "Owner",
+                            "description": "Blog Owner",
+                            "created_at": "2021-05-20T20:28:04.000Z",
+                            "updated_at": "2021-05-20T20:28:04.000Z"
+                        }
+                    ],
+                    "url": "https://thoughtcrime-games.ghost.io/author/thoughtcrime/"
+                }
+            ],
+            "primary_author": {
+                "id": "1",
+                "name": "Thoughtcrime Games",
+                "slug": "thoughtcrime",
+                "email": "quinn@thoughtcrimegames.net",
+                "profile_image": null,
+                "cover_image": null,
+                "bio": null,
+                "website": null,
+                "location": null,
+                "facebook": null,
+                "twitter": null,
+                "accessibility": null,
+                "status": "active",
+                "meta_title": null,
+                "meta_description": null,
+                "tour": null,
+                "last_seen": "2021-08-27T11:59:49.000Z",
+                "created_at": "2021-05-20T20:28:04.000Z",
+                "updated_at": "2021-08-27T11:59:49.000Z",
+                "roles": [
+                    {
+                        "id": "60a6c6541fcca9002f5c8eb9",
+                        "name": "Owner",
+                        "description": "Blog Owner",
+                        "created_at": "2021-05-20T20:28:04.000Z",
+                        "updated_at": "2021-05-20T20:28:04.000Z"
+                    }
+                ],
+                "url": "https://thoughtcrime-games.ghost.io/author/thoughtcrime/"
+            },
+            "primary_tag": null,
+            "url": "https://thoughtcrime-games.ghost.io/p/0d725064-4953-43da-a2da-6bded281b27b/",
+            "excerpt": "I've mentioned it before, but I want more games to invest in adventures. Why?\nQuite simply this: a good adventure shows off the applications of your game\nsystem. It serves as a guide for GMs and players for what your game can do, what\nyour world is like.it doesn't have to be a linear adventure with a pre-planned\nplot, either: For @Genesisoflegend's Sigs we did starting scenarios that gave a\nlot of backdrop into some situation that represents what can happen in the\nworld. Even if you never play i",
+            "og_image": null,
+            "og_title": null,
+            "og_description": null,
+            "twitter_image": null,
+            "twitter_title": null,
+            "twitter_description": null,
+            "meta_title": null,
+            "meta_description": null,
+            "email_subject": null,
+            "frontmatter": null,
+            "feature_image_alt": null,
+            "feature_image_caption": null,
+            "email_only": false,
+            "email": null
+        }
+    ]
+}

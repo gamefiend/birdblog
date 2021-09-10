@@ -2,14 +2,13 @@ package birdblog
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
-	"net/http"
 )
 
 type TwitterResponse struct {
 	Data []struct {
-		Text string
+		Text     string
+		AuthorID string `json:"author_id"`
 	}
 	Meta struct {
 		NewestID    string
@@ -19,22 +18,32 @@ type TwitterResponse struct {
 	}
 }
 
-// DecodeJSONIntoStruct returns TwitterResponse
-func DecodeJSONIntoStruct(r io.Reader) (TwitterResponse, error) {
-	var tr TwitterResponse
-	err := json.NewDecoder(r).Decode(&tr)
-	if err != nil {
-		return TwitterResponse{}, err
-	}
-	return tr, nil
+type Tweet struct {
+	Content  string
+	AuthorID string
 }
 
-func NewTweetRequest(token, ID string) (*http.Request, error) {
-	URL := fmt.Sprintf("https://api.twitter.com/2/tweets?ids=%s&tweet.fields=author_id,conversation_id,created_at,in_reply_to_user_id,referenced_tweets&expansions=author_id,in_reply_to_user_id,referenced_tweets.id&user.fields=name,username", ID)
-	req, err := http.NewRequest(http.MethodGet, URL, nil)
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
-	return req, nil
+
+func (t Tweet) String() string {
+	return t.Content
 }
+
+// DecodeJSONIntoStruct returns Conversation
+func DecodeJSONIntoStruct(r io.Reader) (Conversation, error) {
+	var tr TwitterResponse
+
+	err := json.NewDecoder(r).Decode(&tr)
+	if err != nil {
+		return Conversation{}, err
+	}
+	// grab the data in reverse order and put it into conversation
+	convo := make(Conversation, 0, len(tr.Data))
+	for i := len(tr.Data) - 1; i >= 0; i-- {
+		convo = append(convo, Tweet{
+			Content:  tr.Data[i].Text,
+			AuthorID: tr.Data[i].AuthorID,
+		})
+	}
+	return convo, nil
+}
+

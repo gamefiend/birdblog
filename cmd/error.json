@@ -1,0 +1,24 @@
+{
+    "errors": [
+        {
+            "message": "Internal server error, cannot save post.",
+            "context": "Validation failed for posts.",
+            "type": "InternalServerError",
+            "details": [
+                {
+                    "keyword": "required",
+                    "dataPath": "",
+                    "schemaPath": "#/required",
+                    "params": {
+                        "missingProperty": "posts"
+                    },
+                    "message": "should have required property 'posts'"
+                }
+            ],
+            "property": "posts",
+            "help": null,
+            "code": null,
+            "id": "625c15c0-db2f-11eb-8c39-e32a19bf497d"
+        }
+    ]
+}
