@@ -4,7 +4,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 	"os"
 	"time"
@@ -41,18 +40,21 @@ func RunCLI() {
 	ghostResp, err := http.DefaultClient.Do(ghostReq)
 	io.Copy(os.Stdout, ghostResp.Body)
 	if err != nil {
-		log.Fatal("Can't make the ghost post", err)
+		fmt.Fprintln(os.Stderr, "can't make the ghost post:", err)
+		os.Exit(1)
 	}
 	ghostURL, err := RetrieveGhostURL(ghostResp.Body)
 	if err != nil {
-		log.Fatalf("Error retrieving Ghost URL: %s", err.Error())
+		fmt.Fprintf(os.Stderr, "Error retrieving Ghost URL: %v\n", err)
+		os.Exit(1)
 	}
 	defer ghostResp.Body.Close()
 
 	fmt.Printf("Ghost URL: %s", ghostURL)
 	if ghostResp.StatusCode != http.StatusCreated {
 		r, _ := io.ReadAll(ghostResp.Body)
-		log.Fatal("\nCan't make a Ghost draft: ", string(r))
+		fmt.Fprintf(os.Stderr, "unexpected Ghost status code %q, response: %q\n", ghostResp.Status, string(r))
+		os.Exit(1)
 	}
 }
 

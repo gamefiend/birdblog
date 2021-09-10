@@ -2,7 +2,6 @@ package birdblog
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 )
 
@@ -23,12 +22,12 @@ func NewTwitterClient(token string) *TwitterClient {
 func (tc *TwitterClient) GetConversation(ID string) (Conversation, error) {
 	req, err := tc.NewConversationRequest(ID)
 	if err != nil {
-		log.Fatal(err)
+		return nil, err
 	}
 
 	resp, err := tc.HTTPClient.Do(req)
 	if err != nil {
-		log.Fatal(err)
+		return nil, err
 	}
 	defer resp.Body.Close()
 	if resp.StatusCode != http.StatusOK {
